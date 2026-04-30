@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 import numpy as np
-model = joblib.load(r"E:\loan\random_forest.pkl")
+model = joblib.load("random_forest.pkl")
 st.title("Loan Approval Prediction")
 st.write("Enter details:")
 self_employed = st.selectbox("Self Employed", ["No", "Yes"])
