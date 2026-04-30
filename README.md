@@ -1,4 +1,4 @@
-# Loan Approval Prediction System
+# Bank Loan Approval Decision Engine
 
 ## Project Overview
 This project builds a Machine Learning model to predict whether a loan application will be Approved or Rejected based on applicant details such as income, loan amount, CIBIL score, and assets.
@@ -8,7 +8,7 @@ The objective is to assist financial institutions in making faster and more accu
 ---
 
 ## Dataset Information
-The dataset contains 42269 records with the following features:
+The dataset contains 4269 records with the following features:
 
 - no_of_dependents
 - education
@@ -79,59 +79,32 @@ Used SMOTE to balance dataset
 
 Confusion Matrix:
 [[500 36]
- [  1 317]]
+[ 1 317]]
+          precision    recall  f1-score   support
 
-Classification Report:
-precision    recall  f1-score   support
-
-0       1.00      0.93      0.96       536
-1       0.90      1.00      0.94       318
+       0       1.00      0.93      0.96       536
+       1       0.90      1.00      0.94       318
 
 accuracy                           0.96
-macro avg       0.95      0.96      0.95
-weighted avg    0.96      0.96      0.96
-
----
 
 ### Random Forest
 
 Confusion Matrix:
+
 [[505 31]
- [  6 312]]
+[ 6 312]]
+          precision    recall  f1-score   support
 
-Classification Report:
-precision    recall  f1-score   support
-
-0       0.99      0.94      0.96       536
-1       0.91      0.98      0.94       318
-
-accuracy                           0.96
-macro avg       0.95      0.96      0.95
-weighted avg    0.96      0.96      0.96
-
----
-
-### Logistic Regression
-
-Confusion Matrix:
-[[451 85]
- [103 215]]
-
-Classification Report:
-precision    recall  f1-score   support
-
-0       0.81      0.84      0.83       536
-1       0.72      0.68      0.70       318
+       0       0.81      0.84      0.83       536
+       1       0.72      0.68      0.70       318
 
 accuracy                           0.78
-macro avg       0.77      0.76      0.76
-weighted avg    0.78      0.78      0.78
 
 ---
 
 ## Best Model
 
-Decision Tree and Random Forest achieved highest accuracy (96%)
+Decision Tree and Random Forest achieved the highest accuracy of 96 percent.
 
 ---
 
@@ -149,23 +122,9 @@ Decision Tree and Random Forest achieved highest accuracy (96%)
 
 ## Streamlit App
 
-Run the app using:
-
-pip install streamlit  
+Run the application:
+pip install streamlit
 streamlit run app.py
-
----
-
-## Project Structure
-
-loan-approval-prediction/
-│
-├── data/
-├── notebooks/
-├── app.py
-├── model.pkl
-├── README.md
-└── requirements.txt
 
 ---
 
